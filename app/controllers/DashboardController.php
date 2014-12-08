@@ -1,8 +1,11 @@
 <?php
 
-class HomeController extends BaseController {
+class DashboardController extends BaseController {
 
-	/*
+    public function __construct() {
+        $this->beforeFilter('auth');
+    }
+    /*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
 	|--------------------------------------------------------------------------
@@ -17,7 +20,7 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('home');
+		return View::make('user/dashboard');
 	}
 
 }
