@@ -14,10 +14,12 @@
         } ?>
   <hr>
   @section('content')
+    {{ HTML::linkAction('HomeController@getIndex', 'Home', array(), array('class' => 'home')) }}
+    <br>
     <br>
     {{ Form::open(array('url' => 'user/login', 'method' => 'post')) }}
     {{ Form::label('username', 'User Name') }}
-    {{ Form::text('username',Input::get('username')) }} (max. 100)<br>
+    {{ Form::text('username',Input::get('username')) }}<br>
     {{ Form::label('password', 'Password') }}
     {{ Form::password('password')}}<br><br>
     {{ Form::submit('Submit') }}

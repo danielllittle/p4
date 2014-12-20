@@ -3,8 +3,8 @@
 @section('heading')
   <div>
   {{ HTML::linkAction('UserController@getLogout', 'Logout', array(), array('class' => 'logout')) }}
-  {{ HTML::linkAction('RideController@getAdmin', 'Admin', array(), array('class' => 'admin')) }}
   @if(Auth::user()->isAdmin())
+  {{ HTML::linkAction('RideController@getAdmin', 'Admin', array(), array('class' => 'admin')) }}
   @endif
   </div>
 @stop

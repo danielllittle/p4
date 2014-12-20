@@ -43,7 +43,7 @@ class UserController extends BaseController
     {
         $validatorRules = array(
             'username' => 'required|alphaNum|min:4',
-            'password' => 'required|alphaNum|min:6'
+            'password' => 'required|alphaNum|min:4'
         );
 
         $validator = Validator::make(Input::all(), $validatorRules);
@@ -58,7 +58,7 @@ class UserController extends BaseController
             }
             else {
 
-                return Redirect::to('/home')->with('flash_message', 'Log in failed; please try again.');
+                return Redirect::to('/user/login')->with('flash_message', 'Log in failed; please try again.');
             }
         }
     }

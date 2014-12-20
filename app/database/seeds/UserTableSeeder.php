@@ -15,8 +15,8 @@ class UserTableSeeder extends Seeder {
         User::create(array('password' => Hash::make('happyplace'), 'username' => 'walt', 'email' => 'walt@dland.com'));
         User::create(array('password' => Hash::make('honeytree'), 'username' => 'Pooh', 'email' => 'winnie@forest.com'));
         User::create(array('password' => Hash::make('swords'), 'username' => 'Hook', 'email' => 'captain@sea.com', 'admin' => '1'));
-        User::create(array('password' => Hash::make('teacups'), 'username' => 'Cinderella', 'email' => 'cinderella@castle.com'));
-        User::create(array('password' => Hash::make('applesnack'), 'username' => 'Snow White', 'email' => 'snowwhite@dwarf.com'));
+        User::create(array('password' => Hash::make('coolsis'), 'username' => 'Cinderella', 'email' => 'cinderella@castle.com'));
+        User::create(array('password' => Hash::make('applesnack'), 'username' => 'SnowWhite', 'email' => 'snowwhite@dwarf.com'));
 
 	}
 
