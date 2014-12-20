@@ -10,12 +10,12 @@ class RideTableSeeder extends Seeder {
 	public function run()
 	{
 		DB::table('rides')->delete();
-        Ride::create(array('name' => 'SpaceMountain'));
-        Ride::create(array('name' => 'Matterhorn'));
-        Ride::create(array('name' => 'SmallWorld'));
-        Ride::create(array('name' => 'TeaCups'));
-        Ride::create(array('name' => 'BigThunder'));
-        Ride::create(array('name' => 'StarTours'));
+        Ride::create(array('name' => 'SpaceMountain', 'projected' => 60));
+        Ride::create(array('name' => 'Matterhorn', 'projected' => 35));
+        Ride::create(array('name' => 'SmallWorld', 'projected' => 23));
+        Ride::create(array('name' => 'TeaCups', 'projected'=> 15));
+        Ride::create(array('name' => 'BigThunder', 'projected' => 29));
+        Ride::create(array('name' => 'StarTours', 'projected' => 48));
 
 
 

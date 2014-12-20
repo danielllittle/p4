@@ -2,7 +2,10 @@
 
 class HomeController extends BaseController {
 
-	/*
+    public function __construct() {
+        $this->beforeFilter('guest');
+    }
+    /*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
 	|--------------------------------------------------------------------------

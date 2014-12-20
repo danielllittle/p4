@@ -15,6 +15,7 @@ class CreateRidesTable extends Migration {
         Schema::create('rides', function($t) {
             $t->increments('id');
             $t->string('name', 32);
+            $t->integer('projected');
             $t->timestamps();
         });
 	}

@@ -20,4 +20,9 @@ class Ride extends Eloquent {
 	 */
 	protected $hidden = array();
 
+    public function users()
+    {
+        return $this->belongsToMany('User');
+    }
+
 }

@@ -1,0 +1,36 @@
+
+.header {
+    background: #f3f3f3;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+
+    /*for demo purposes only */
+
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+.column-ride {
+    order: 1;
+}
+.column-projected {
+    order: 2;
+}
+.column-reported {
+    order: 3;
+}
+.column-user {
+    order: 4;
+}
+.column-remove {
+    order: 5;
+}

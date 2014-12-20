@@ -20,7 +20,12 @@ class DashboardController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('user/dashboard');
+        $availableRides = Auth::user()->availableRides();
+
+        $myrides = Auth::user()->associatedRides();
+
+
+        return View::make('user/dashboard')->with('myrides', $myrides)->with('availableRides',$availableRides)->with('flash_message', $myrides);
 	}
 
 }

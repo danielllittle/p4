@@ -19,6 +19,7 @@ class CreateRideUserTable extends Migration {
             $table->integer('user_id')->unsigned();
             $table->foreign('ride_id')->references('id')->on('rides');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unique(array('ride_id', 'user_id'));
         });
     }
 
