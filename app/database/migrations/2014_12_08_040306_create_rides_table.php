@@ -12,7 +12,11 @@ class CreateRidesTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+        Schema::create('rides', function($t) {
+            $t->increments('id');
+            $t->string('name', 32);
+            $t->timestamps();
+        });
 	}
 
 	/**
@@ -22,7 +26,7 @@ class CreateRidesTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+        Schema::drop('rides');
 	}
 
 }
