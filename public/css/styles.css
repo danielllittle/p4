@@ -1,10 +1,14 @@
 
 .header {
-    background: #f3f3f3;
+    background: #33ccff;
+    align: right;
 }
 
 .container {
+
     display: flex;
+    //margin:0px 15px;
+    width:70%
 }
 
 .column {
@@ -13,14 +17,16 @@
     /*for demo purposes only */
 
     border: 1px solid #e6e6e6;
-    box-sizing: border-box;
+    box-sizing: content-box;
     text-align: center;
 }
 
 
 
+
 .column-ride {
     order: 1;
+
 }
 .column-projected {
     order: 2;

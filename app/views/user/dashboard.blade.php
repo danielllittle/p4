@@ -1,14 +1,26 @@
 @extends('..._master')
 
+@section('heading')
+  <div>
+  {{ HTML::linkAction('UserController@getLogout', 'Logout', array(), array('class' => 'logout')) }}
+  {{ HTML::linkAction('RideController@getAdmin', 'Admin', array(), array('class' => 'admin')) }}
+  @if(Auth::user()->isAdmin())
+  @endif
+  </div>
+@stop
+
 @section('title')
   Dashboard - ParkAdvisor
 @stop
 
 @section('content')
-  <h1>Welcome "{{ Auth::user()->username }}" to your Dashboard!</h1>
+  <h1>Welcome "{{ Auth::user()->username }}" to your Park Advisor Dashboard!</h1>
 
 
-  <hr>
+
+        <br>
+        <h2>You are currently watching {{count($myrides) }} rides.</h2>
+        <br>
         <div class="container">
            <div class="header column column-ride column-offset-2">Ride</div>
            <div class="header column column-projected column-inset-1">Projected Time</div>
@@ -30,9 +42,13 @@
            {{ Form::hidden('rideid', $ride->id) }}
            {{Form::submit('Remove');}}
            {{ Form::close() }}</div>
-           
+
         </div>
         @endforeach
+<br>
+<br>
+<br>
+<h2>Click on 'Add' to include more rides to your dashboard.</h2>
 
         <br>
         <div class="container">

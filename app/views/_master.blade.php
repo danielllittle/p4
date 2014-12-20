@@ -13,9 +13,9 @@
   @if(Session::get('flash_message'))
       <div class='flash-message'>{{ Session::get('flash_message') }}</div>
   @endif
-  <div class="nav">@yield('nav')</div>
-  @yield('description')<hr>
-  @yield('content')<hr>
+  <div class="nav">@yield('heading')</div>
+  @yield('description')
+  @yield('content')
   @yield('results')
 </body>
 </html>

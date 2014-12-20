@@ -13,12 +13,13 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+    return Redirect::to('home');
 });
 
 Route::controller('home', 'HomeController');
 Route::controller('user/dashboard', 'DashboardController');
 Route::controller('user', 'UserController');
+Route::controller('ride', 'RideController');
 
 
 #Route::all('/login', 'UserController@getLogin');

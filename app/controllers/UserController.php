@@ -6,6 +6,7 @@ class UserController extends BaseController
     public function __construct() {
         $this->beforeFilter('csrf', array('on' => 'post'));
         $this->beforeFilter('guest', array('on' => 'get', 'except' => 'getLogout'));
+
     }
 
     public function postAdd() {
@@ -74,7 +75,7 @@ class UserController extends BaseController
         Auth::logout();
 
         # Send them to the homepage
-        return Redirect::to('/');
+        return Redirect::to('/home');
 
 
     }
