@@ -15,4 +15,16 @@ return array(
 
 	'debug' => false,
 
+    'connections' => array(
+
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'parkadvisor',
+            'username'  => 'root',
+            'password'  => 'disneyland',
+        ),
+
+    ),
+
 );
